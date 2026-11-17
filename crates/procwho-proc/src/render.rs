@@ -692,7 +692,7 @@ pub fn top(o: &TopOpts) -> Result<String, String> {
             fmt_age(w.oldest, snap.ts),
             w.kind,
             format!("Identity: {}", w.confidence),
-            &w.name
+            w.name
         );
     }
     if ws.len() > o.n {
@@ -916,7 +916,7 @@ pub fn why(target: &str, json: bool) -> Result<String, String> {
             "\nProcess    PID {}. Instance ID: {} (unique during this boot). Started: {}.",
             p.pid, p.uniq, started
         );
-        let _ = writeln!(s, "Command    {}", &p.cmd);
+        let _ = writeln!(s, "Command    {}", p.cmd);
         let _ = writeln!(s, "Executable {}", sanitize(&p.exe));
         let _ = writeln!(
             s,
@@ -935,7 +935,7 @@ pub fn why(target: &str, json: bool) -> Result<String, String> {
         }
         let _ = writeln!(s, "Ancestry:");
         for a in snap.chain(p.pid) {
-            let _ = writeln!(s, "  <- {:>6} {}", a, &snap.procs[snap.index[&a]].cmd);
+            let _ = writeln!(s, "  <- {:>6} {}", a, snap.procs[snap.index[&a]].cmd);
         }
         if p.ppid == 1 && p.label.is_empty() {
             let _ = writeln!(
@@ -1038,7 +1038,7 @@ pub fn tree(target: &str, n: usize) -> Result<String, String> {
             fmt_age(p.start, snap.ts),
             pid,
             "  ".repeat(depth),
-            &p.cmd,
+            p.cmd,
             extra,
             ports,
             z
@@ -1059,7 +1059,7 @@ pub fn tree(target: &str, n: usize) -> Result<String, String> {
                     "{:>22} {}[nested workload: {}, {}]",
                     "",
                     "  ".repeat(depth + 1),
-                    &kw.name,
+                    kw.name,
                     fmt_mem(kw.fp as f64)
                 );
             }
@@ -1172,7 +1172,7 @@ pub fn unknown(n: usize, json: bool) -> Result<String, String> {
             format!("Identity: {}", w.confidence),
             fmt_mem(w.fp as f64),
             w.procs,
-            &w.name
+            w.name
         );
         let _ = writeln!(
             s,
