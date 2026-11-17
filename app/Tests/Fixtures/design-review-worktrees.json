@@ -1,0 +1,139 @@
+{
+  "observed_at_unix": 1794758400,
+  "collect_ms": 2000,
+  "schema_version": 3,
+  "generated_at": 1794758400,
+  "scan_secs": 2,
+  "worktrees_found": 7,
+  "totals": [
+    {
+      "verdict": "merged-idle",
+      "count": 1,
+      "size_bytes": 6442450944,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "in-use",
+      "count": 1,
+      "size_bytes": 4294967296,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "has-work",
+      "count": 1,
+      "size_bytes": 3221225472,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "stale",
+      "count": 1,
+      "size_bytes": 2147483648,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "active",
+      "count": 1,
+      "size_bytes": 1073741824,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "missing",
+      "count": 1,
+      "size_bytes": 0,
+      "size_unknown": 1
+    },
+    {
+      "verdict": "unknown",
+      "count": 1,
+      "size_bytes": null,
+      "size_unknown": 1
+    }
+  ],
+  "worktrees": [
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/merged-idle", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/merged-idle",
+      "verdict": "merged-idle",
+      "size_bytes": 6442450944,
+      "idle_secs": 7200,
+      "exists": true,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/in-use", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/in-use",
+      "verdict": "in-use",
+      "size_bytes": 4294967296,
+      "idle_secs": 7200,
+      "exists": true,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/has-work", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/has-work",
+      "verdict": "has-work",
+      "size_bytes": 3221225472,
+      "idle_secs": 7200,
+      "exists": true,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/stale", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/stale",
+      "verdict": "stale",
+      "size_bytes": 2147483648,
+      "idle_secs": 7200,
+      "exists": true,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/active", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/active",
+      "verdict": "active",
+      "size_bytes": 1073741824,
+      "idle_secs": 7200,
+      "exists": true,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    },
+    {
+      "size_measured_unix": null, "path": "/Users/user/worktrees/missing", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/missing",
+      "verdict": "missing",
+      "size_bytes": null,
+      "idle_secs": 7200,
+      "exists": false,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    },
+    {
+      "size_measured_unix": null, "path": "/Users/user/worktrees/unknown", "discovered_via": "root",
+      "repo": "procwho",
+      "branch": "review/unknown",
+      "verdict": "unknown",
+      "size_bytes": null,
+      "idle_secs": 7200,
+      "exists": true,
+      "reasons": [
+        "Fixture for design review."
+      ]
+    }
+  ],
+  "notes": []
+}

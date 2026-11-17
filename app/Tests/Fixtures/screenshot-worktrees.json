@@ -1,0 +1,143 @@
+{
+  "observed_at_unix": 1794758400,
+  "collect_ms": 2000,
+  "schema_version": 3,
+  "generated_at": 1794758400,
+  "scan_secs": 2,
+  "worktrees_found": 7,
+  "totals": [
+    {
+      "verdict": "merged-idle",
+      "count": 3,
+      "size_bytes": 6979321855,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "in-use",
+      "count": 1,
+      "size_bytes": 2576980377,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "has-work",
+      "count": 1,
+      "size_bytes": 1932735283,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "stale",
+      "count": 1,
+      "size_bytes": 1181116006,
+      "size_unknown": 0
+    },
+    {
+      "verdict": "active",
+      "count": 1,
+      "size_bytes": 644245094,
+      "size_unknown": 0
+    }
+  ],
+  "worktrees": [
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/web-app/feature-search", "discovered_via": "root",
+      "repo": "web-app",
+      "branch": "feature/search",
+      "verdict": "merged-idle",
+      "size_bytes": 3865470566,
+      "idle_secs": 1036800,
+      "exists": true,
+      "reasons": [
+        "Pull request merged; no active processes."
+      ],
+      "repo_path": "/Users/user/repos/web-app",
+      "size_unknown": false
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/api-server/fix-pagination", "discovered_via": "root",
+      "repo": "api-server",
+      "branch": "fix/pagination",
+      "verdict": "merged-idle",
+      "size_bytes": 2254857830,
+      "idle_secs": 777600,
+      "exists": true,
+      "reasons": [
+        "Pull request merged; no active processes."
+      ],
+      "repo_path": "/Users/user/repos/api-server",
+      "size_unknown": false
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/docs-site/docs-setup", "discovered_via": "root",
+      "repo": "docs-site",
+      "branch": "docs/setup",
+      "verdict": "merged-idle",
+      "size_bytes": 858993459,
+      "idle_secs": 1296000,
+      "exists": true,
+      "reasons": [
+        "Pull request merged; no active processes."
+      ],
+      "repo_path": "/Users/user/repos/docs-site",
+      "size_unknown": false
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/web-app/feature-settings", "discovered_via": "root",
+      "repo": "web-app",
+      "branch": "feature/settings",
+      "verdict": "in-use",
+      "size_bytes": 2576980377,
+      "idle_secs": 0,
+      "exists": true,
+      "reasons": [
+        "Local working tree metadata."
+      ],
+      "repo_path": "/Users/user/repos/web-app",
+      "size_unknown": false
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/api-server/feature-export", "discovered_via": "root",
+      "repo": "api-server",
+      "branch": "feature/export",
+      "verdict": "has-work",
+      "size_bytes": 1932735283,
+      "idle_secs": 259200,
+      "exists": true,
+      "reasons": [
+        "Local working tree metadata."
+      ],
+      "repo_path": "/Users/user/repos/api-server",
+      "size_unknown": false
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/design-system/refactor-tokens", "discovered_via": "root",
+      "repo": "design-system",
+      "branch": "refactor/tokens",
+      "verdict": "stale",
+      "size_bytes": 1181116006,
+      "idle_secs": 1814400,
+      "exists": true,
+      "reasons": [
+        "Local working tree metadata."
+      ],
+      "repo_path": "/Users/user/repos/design-system",
+      "size_unknown": false
+    },
+    {
+      "size_measured_unix": 1794758400, "path": "/Users/user/worktrees/cli-tools/feature-table", "discovered_via": "root",
+      "repo": "cli-tools",
+      "branch": "feature/table",
+      "verdict": "active",
+      "size_bytes": 644245094,
+      "idle_secs": 86400,
+      "exists": true,
+      "reasons": [
+        "Local working tree metadata."
+      ],
+      "repo_path": "/Users/user/repos/cli-tools",
+      "size_unknown": false
+    }
+  ],
+  "notes": [],
+  "repos_found": 5,
+  "repos": []
+}

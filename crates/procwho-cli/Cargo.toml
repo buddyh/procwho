@@ -1,0 +1,21 @@
+[package]
+name = "procwho-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish = false
+description = "Read-only macOS workload and git worktree CLI"
+keywords = ["macos", "process", "workload", "git", "worktree"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "procwho"
+path = "src/main.rs"
+
+[dependencies]
+procwho-mcp = { path = "../procwho-mcp" }
+procwho-proc = { path = "../procwho-proc" }
+procwho-wt = { path = "../procwho-wt" }
+serde_json.workspace = true

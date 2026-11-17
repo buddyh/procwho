@@ -1,0 +1,91 @@
+[
+  {
+    "name": "claude",
+    "executables": [],
+    "executable_patterns": [
+      "/\\.local/share/claude/versions/[0-9][^/]*$",
+      "/Library/Application Support/Claude/claude-code/[^/]+/[^/]+/claude\\.app/Contents/MacOS/claude$",
+      "/claude_agent_sdk/_bundled/claude$"
+    ],
+    "argv_patterns": [
+      "/@anthropic-ai/claude-code/cli\\.js$"
+    ],
+    "session_identity": "claude_codex",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume",
+      "--session-id"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "value_flags": [],
+    "headless_flags": [
+      "-p",
+      "--print"
+    ]
+  },
+  {
+    "name": "codex",
+    "executables": [],
+    "executable_patterns": [
+      "/@openai/codex/node_modules/@openai/codex-darwin-(?:arm64|x64)/vendor/[^/]+/bin/codex$",
+      "/ChatGPT\\.app/Contents/Resources/codex-cli/CodexCLI\\.app/Contents/MacOS/codex$"
+    ],
+    "argv_patterns": [
+      "/@openai/codex/bin/codex\\.js$"
+    ],
+    "session_identity": "claude_codex",
+    "shared_host_subcommands": [
+      "app-server",
+      "exec-server"
+    ],
+    "session_commands": [
+      [
+        "resume"
+      ],
+      [
+        "exec",
+        "resume"
+      ]
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "value_flags": [
+      "-p",
+      "--prompt",
+      "-c"
+    ],
+    "excluded_commands": [
+      [
+        "review"
+      ],
+      [
+        "features"
+      ],
+      [
+        "debug"
+      ],
+      [
+        "completion"
+      ],
+      [
+        "cloud"
+      ]
+    ],
+    "headless_commands": [
+      [
+        "exec"
+      ]
+    ]
+  },
+  {
+    "name": "codex",
+    "executable_patterns": [
+      "/@openai/codex/node_modules/@openai/codex-darwin-(?:arm64|x64)/vendor/[^/]+/bin/codex-code-mode-host$",
+      "/ChatGPT\\.app/Contents/Resources/(?:codex-cli/bin/codex-code-mode-host|cua_node/bin/node_repl)$"
+    ],
+    "role": "toolset",
+    "ancestor_patterns": [
+      "/@openai/codex/node_modules/@openai/codex-darwin-(?:arm64|x64)/vendor/[^/]+/bin/codex$",
+      "/ChatGPT\\.app/Contents/Resources/codex-cli/CodexCLI\\.app/Contents/MacOS/codex$"
+    ]
+  }
+]

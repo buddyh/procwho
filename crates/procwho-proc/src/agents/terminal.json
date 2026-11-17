@@ -1,0 +1,135 @@
+[
+  {
+    "name": "OpenCode",
+    "executables": [],
+    "executable_patterns": [
+      "/node_modules/opencode-ai/bin/opencode(?:\\.exe)?$"
+    ],
+    "argv_patterns": [
+      "/node_modules/opencode-ai/bin/opencode(?:\\.exe)?$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [
+      "serve",
+      "web"
+    ],
+    "session_flags": [
+      "-s",
+      "--session"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "headless_commands": [
+      [
+        "run"
+      ]
+    ],
+    "excluded_commands": [
+      [
+        "mini"
+      ]
+    ]
+  },
+  {
+    "name": "pi",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@(?:earendil-works|mariozechner)/pi-coding-agent/dist/(?:bundle/)?cli\\.js$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--session-id",
+      "--session"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "host_flags": [
+      [
+        "--mode=rpc"
+      ]
+    ],
+    "headless_flags": [
+      "-p",
+      "--print",
+      "--mode=json"
+    ],
+    "value_flags": [
+      "-p",
+      "--print",
+      "--mode",
+      "--session"
+    ]
+  },
+  {
+    "name": "Kiro",
+    "executables": [
+      "kiro-cli"
+    ],
+    "executable_patterns": [],
+    "argv_patterns": [],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume-id"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "headless_flags": [
+      "--no-interactive"
+    ],
+    "excluded_flags": [
+      "--cloud"
+    ],
+    "required_argv": [
+      "chat"
+    ]
+  },
+  {
+    "name": "Amp",
+    "executables": [],
+    "executable_patterns": [
+      "/\\.amp/bin/amp$",
+      "/@ampcode/cli/bin/amp\\.exe$"
+    ],
+    "argv_patterns": [
+      "/@ampcode/cli/bin/amp\\.exe$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_commands": [
+      [
+        "threads",
+        "continue"
+      ]
+    ],
+    "session_id_pattern": "^T-[A-Za-z0-9_-]{1,126}$",
+    "headless_flags": [
+      "-x"
+    ],
+    "excluded_flags": [
+      "--executor"
+    ],
+    "excluded_commands": [
+      [
+        "threads",
+        "list"
+      ],
+      [
+        "threads",
+        "search"
+      ],
+      [
+        "threads",
+        "delete"
+      ],
+      [
+        "runner"
+      ],
+      [
+        "orb"
+      ],
+      [
+        "account"
+      ]
+    ]
+  }
+]

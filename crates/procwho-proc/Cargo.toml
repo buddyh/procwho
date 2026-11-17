@@ -1,0 +1,21 @@
+[package]
+name = "procwho-proc"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish = false
+description = "Read-only process to workload attribution for macOS"
+keywords = ["macos", "process", "workload", "git", "worktree"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+libc.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+# unicode-case is needed for (?i) patterns in unicode mode; the workspace default turns it off.
+regex = { workspace = true, features = ["unicode-case"] }
+# System libsqlite3, no bundled C build.
+rusqlite = { version = "0.32", default-features = false }
+plist = { version = "1", default-features = false }

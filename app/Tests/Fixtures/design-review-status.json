@@ -1,0 +1,244 @@
+{
+  "worktree_roots": ["/Users/user/code", "/Users/user/projects"],
+  "observed_at_unix": 1794758400,
+  "collect_ms": 0,
+  "schema_version": 3,
+  "generated_unix": 1794758400,
+  "system": {
+    "ncpu": 12,
+    "mem_total_bytes": 51539607552,
+    "swap_used_bytes": 1073741824,
+    "swap_total_bytes": 4294967296, "swap_disk_free_bytes": 55834574848, "swap_disk_total_bytes": 536870912000,
+    "load1": 18.3,
+    "mem_used_bytes": 36077725286,
+    "mem_available_bytes": 15461882266,
+    "mem_compressed_bytes": 4294967296,
+    "mem_wired_bytes": 3221225472,
+    "memory_pressure": "normal"
+  },
+  "totals": {
+    "accounting": "exclusive",
+    "processes": 1091,
+    "workloads": 40,
+    "agent_bytes": 17072495001,
+    "agent_associated_bytes": 17072495001,
+    "agent_associated_medium_bytes": 0
+  },
+  "by_kind": [
+    {
+      "accounting": "exclusive",
+      "kind": "agent-command",
+      "workloads": 32,
+      "footprint_bytes": 6979321856,
+      "cpu_pct": 24.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "agent-host",
+      "workloads": 1,
+      "footprint_bytes": 4294967296,
+      "cpu_pct": 0.4
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "agent-toolset",
+      "workloads": 1,
+      "footprint_bytes": 3650722201,
+      "cpu_pct": 0.4
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "agent-session",
+      "workloads": 1,
+      "footprint_bytes": 2147483648,
+      "cpu_pct": 0.4
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "simulator",
+      "workloads": 1,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "service",
+      "workloads": 1,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "app",
+      "workloads": 1,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "system",
+      "workloads": 1,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "detached",
+      "workloads": 1,
+      "footprint_bytes": 0,
+      "cpu_pct": 0
+    }
+  ],
+  "workloads": [
+    {
+      "accounting": "exclusive",
+      "key": "review:0",
+      "name": "procwho · Codex command · node vitest.mjs --run --coverage --reporter=verbose",
+      "kind": "agent-command",
+      "confidence": "exact",
+      "processes": 1091,
+      "footprint_bytes": 6979321856,
+      "cpu_pct": 24.5,
+      "age_seconds": 3500,
+      "ports": [
+        "3000"
+      ],
+      "inside": "T3 Code (Nightly) host whose name can be truncated",
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Codex"
+      }
+    },
+    {
+      "accounting": "exclusive",
+      "key": "review:1",
+      "name": "Codex app-server shared by all T3 Code Codex threads",
+      "kind": "agent-host",
+      "confidence": "exact",
+      "processes": 3,
+      "footprint_bytes": 4294967296,
+      "cpu_pct": 0.4,
+      "age_seconds": 3500,
+      "ports": [
+        "3000"
+      ],
+      "inside": "T3 Code (Nightly) host whose name can be truncated",
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Codex"
+      }
+    },
+    {
+      "accounting": "exclusive",
+      "key": "review:2",
+      "name": "procwho · Codex tool set",
+      "kind": "agent-toolset",
+      "confidence": "exact",
+      "processes": 3,
+      "footprint_bytes": 3650722201,
+      "cpu_pct": 0.4,
+      "age_seconds": 3500,
+      "ports": [
+        "3000"
+      ],
+      "inside": "T3 Code (Nightly) host whose name can be truncated",
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Codex"
+      }
+    },
+    {
+      "accounting": "exclusive",
+      "key": "review:3",
+      "name": "Claude session: procwho [via T3 Code]",
+      "kind": "agent-session",
+      "confidence": "exact",
+      "processes": 3,
+      "footprint_bytes": 2147483648,
+      "cpu_pct": 0.4,
+      "age_seconds": 3500,
+      "ports": [
+        "3000"
+      ],
+      "inside": "T3 Code (Nightly) host whose name can be truncated",
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Claude Code"
+      }
+    },
+    {
+      "accounting": "exclusive",
+      "key": "simulator",
+      "name": "iPhone simulator",
+      "kind": "simulator",
+      "confidence": "high",
+      "processes": 3,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5,
+      "agent_link": null
+    },
+    {
+      "accounting": "exclusive",
+      "key": "service",
+      "name": "Local development server",
+      "kind": "service",
+      "confidence": "high",
+      "processes": 3,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5,
+      "agent_link": null
+    },
+    {
+      "accounting": "exclusive",
+      "key": "app",
+      "name": "Xcode",
+      "kind": "app",
+      "confidence": "high",
+      "processes": 3,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5,
+      "agent_link": null
+    },
+    {
+      "accounting": "exclusive",
+      "key": "system",
+      "name": "macOS services",
+      "kind": "system",
+      "confidence": "high",
+      "processes": 3,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5,
+      "agent_link": null
+    }
+  ],
+  "findings": [
+    {
+      "severity": "review",
+      "title": "Working directory deleted under an agent command",
+      "workload_key": "review:0",
+      "reasons": [
+        "The working directory no longer exists."
+      ]
+    },
+    {
+      "severity": "review",
+      "title": "Workload is outside this limited sample",
+      "workload_key": "toolset:missing:123",
+      "reasons": [
+        "First reason explains the missing workload."
+      ]
+    }
+  ],
+  "sources": {
+    "launchctl": true,
+    "web-app": "Local service service metadata 282s old"
+  }
+}

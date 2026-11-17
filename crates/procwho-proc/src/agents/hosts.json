@@ -1,0 +1,91 @@
+[
+  {
+    "name": "T3 Code",
+    "executable_patterns": [
+      "/T3 Code(?: \\(Nightly\\))?\\.app/Contents/MacOS/T3 Code(?: \\(Nightly\\))?$"
+    ],
+    "role": "host",
+    "app_bundles": [
+      "T3 Code",
+      "T3 Code (Nightly)"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "Cursor",
+    "executable_patterns": [
+      "/Cursor\\.app/Contents/MacOS/Cursor$"
+    ],
+    "role": "host",
+    "require_agent_descendant": true,
+    "app_bundles": [
+      "Cursor"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "Zed",
+    "executable_patterns": [
+      "/Zed(?: Preview| Nightly)?\\.app/Contents/MacOS/zed$"
+    ],
+    "role": "host",
+    "require_agent_descendant": true,
+    "app_bundles": [
+      "Zed",
+      "Zed Preview",
+      "Zed Nightly"
+    ],
+    "app_is_agent_product": false
+  },
+  {
+    "name": "Antigravity",
+    "executable_patterns": [
+      "/Antigravity\\.app/Contents/Resources/bin/language_server$"
+    ],
+    "role": "host",
+    "app_bundles": [
+      "Antigravity"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "Windsurf",
+    "executable_patterns": [
+      "/Devin\\.app/Contents/Resources/app/extensions/windsurf/bin/language_server_macos_arm$"
+    ],
+    "role": "host",
+    "app_bundles": [
+      "Windsurf",
+      "Devin"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "Claude",
+    "app_bundles": [
+      "Claude"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "ChatGPT",
+    "app_bundles": [
+      "ChatGPT"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "Kiro",
+    "app_bundles": [
+      "Kiro"
+    ],
+    "app_is_agent_product": true
+  },
+  {
+    "name": "Conductor",
+    "app_bundles": [
+      "Conductor"
+    ],
+    "app_is_agent_product": true
+  }
+]

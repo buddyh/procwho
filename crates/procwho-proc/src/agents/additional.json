@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Droid",
+    "executables": [],
+    "executable_patterns": [
+      "/\\.local/bin/droid$"
+    ],
+    "argv_patterns": [],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume",
+      "-r",
+      "-s"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "headless_commands": [
+      [
+        "exec"
+      ]
+    ],
+    "excluded_flags": [
+      "--list-tools"
+    ]
+  },
+  {
+    "name": "Qwen",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@qwen-code/qwen-code/dist/index\\.js$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [
+      "serve"
+    ],
+    "session_flags": [
+      "--session-id"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "host_flags": [
+      [
+        "--acp"
+      ],
+      [
+        "--experimental-acp"
+      ]
+    ]
+  },
+  {
+    "name": "Crush",
+    "executables": [],
+    "executable_patterns": [
+      "/Cellar/crush/[^/]+/bin/crush$"
+    ],
+    "argv_patterns": [
+      "/@charmland/crush/run-crush\\.js$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [
+      "server"
+    ],
+    "headless_commands": [
+      [
+        "run"
+      ]
+    ],
+    "value_flags": [
+      "--session",
+      "-s",
+      "--cwd"
+    ]
+  }
+]

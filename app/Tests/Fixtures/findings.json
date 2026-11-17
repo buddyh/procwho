@@ -1,0 +1,39 @@
+{"schema_version":2,"observed_at_unix":1794825000,"collect_ms":0,"findings":[
+ {
+  "severity": "review",
+  "title": "Working directory deleted under T3 Code · Codex tool set · started 09:56",
+  "workload": "toolset:30969:1794581784",
+  "reasons": [
+   "1 cwd path(s) no longer exist, e.g. /Users/user/repo-8/plugins/cache/openai-curated-remote/data-analytics/1.1.0-exp-homepage"
+  ],
+  "not_proven": [
+   "that the process is useless"
+  ],
+  "basis": "snapshot"
+ },
+ {
+  "severity": "review",
+  "title": "Working directory deleted under Detached 'node', launched via T3 Code (Nightly)",
+  "workload": "detached:node::T3 Code (Nightly)",
+  "reasons": [
+   "1 cwd path(s) no longer exist, e.g. /private/var/folders/<tmp>"
+  ],
+  "not_proven": [
+   "that the process is useless"
+  ],
+  "basis": "snapshot"
+ },
+ {
+  "severity": "info",
+  "title": "1 process(es) running a binary that was replaced on disk: codex-code-mode-host",
+  "workload": "hostcmd:30969:31362:6646786",
+  "reasons": [
+   "e.g. PID 31362 started 12h06m ago; the kernel no longer has a path for its executable, so the file at odex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex-code-mode-host is a newer copy",
+   "typical after an in-place upgrade (npm/brew) while the old version keeps running"
+  ],
+  "not_proven": [
+   "any malfunction: the old code keeps working until restarted"
+  ],
+  "basis": "snapshot"
+ }
+]}

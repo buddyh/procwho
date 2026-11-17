@@ -1,0 +1,42 @@
+title = "procwho secret scanning"
+
+[extend]
+useDefault = true
+
+# Only these synthetic test values in this source file are exempt. New credentials
+# in redact.rs, and the same strings in other files, remain subject to scanning.
+[[rules]]
+id = "stripe-access-token"
+[[rules.allowlists]]
+description = "Synthetic Stripe tokens in redaction tests"
+condition = "AND"
+paths = ['''^crates/procwho-proc/src/redact\.rs$''']
+regexTarget = "match"
+regexes = ['''\b[rs]k_(?:live|test)_abcdef123456\b''']
+
+[[rules]]
+id = "gcp-api-key"
+[[rules.allowlists]]
+description = "Synthetic Google key in redaction tests"
+condition = "AND"
+paths = ['''^crates/procwho-proc/src/redact\.rs$''']
+regexTarget = "match"
+regexes = ['''\bAIzaSyA1234567890abcdefghijklmnopqrstuv\b''']
+
+[[rules]]
+id = "curl-auth-user"
+[[rules.allowlists]]
+description = "Synthetic curl credentials in redaction tests"
+condition = "AND"
+paths = ['''^crates/procwho-proc/src/redact\.rs$''']
+regexTarget = "match"
+regexes = ['''curl (?:-u |--user(?: |=))admin:hunter2''']
+
+[[rules]]
+id = "private-key"
+[[rules.allowlists]]
+description = "Incomplete synthetic PEM block in redaction tests"
+condition = "AND"
+paths = ['''^crates/procwho-proc/src/redact\.rs$''']
+regexTarget = "match"
+regexes = ['''-----BEGIN RSA PRIVATE KEY----- MIIEow abc -----END RSA PRIVATE KEY-----''']

@@ -1,0 +1,140 @@
+{
+  "observed_at_unix": 1794825000,
+  "collect_ms": 0,
+  "workload": {
+    "key": "session:web-app",
+    "name": "Claude session: web-app",
+    "kind": "agent-session",
+    "confidence": "exact",
+    "footprint_bytes": 10093173145,
+    "rss_bytes": 2147483648,
+    "processes": 6,
+    "cpu_pct": null,
+    "age_seconds": 12600,
+    "ports": [
+      "3000"
+    ],
+    "inside": "Code editor",
+    "project_path": "/Users/user/repos/web-app",
+    "root_pid": 4102,
+    "evidence": [
+      "Agent executable and session identity match.",
+      "Working directory matches the web-app repository.",
+      "Parent chain links to the code editor."
+    ],
+    "identity": [
+      "Session: demo-web-app"
+    ],
+    "if_stopped": [
+      "Ends the web-app agent session and its child processes."
+    ],
+    "cpu_sample_state": "not_sampled",
+    "cpu_interval_s": null,
+    "accounting": "exclusive",
+    "agent_link": {
+      "relation": "agent",
+      "via": "agent workload",
+      "confidence": "high",
+      "agent_product": "Claude Code"
+    },
+    "members": [
+      {
+        "pid": 4102,
+        "ppid": 1,
+        "name": "claude",
+        "command": "claude --project /Users/user/code/example",
+        "footprint_bytes": 6767633325,
+        "cpu_pct": 9.5,
+        "age_seconds": 12600
+      },
+      {
+        "pid": 4103,
+        "ppid": 4102,
+        "name": "node",
+        "command": "node --project /Users/user/code/example",
+        "footprint_bytes": 1691908331,
+        "cpu_pct": 2.4,
+        "age_seconds": 12600
+      },
+      {
+        "pid": 4104,
+        "ppid": 4102,
+        "name": "typescript-language-server",
+        "command": "typescript-language-server --project /Users/user/code/example",
+        "footprint_bytes": 751959258,
+        "cpu_pct": 1.1,
+        "age_seconds": 12600
+      },
+      {
+        "pid": 4105,
+        "ppid": 4102,
+        "name": "git",
+        "command": "git --project /Users/user/code/example",
+        "footprint_bytes": 422977082,
+        "cpu_pct": 0.6,
+        "age_seconds": 12600
+      },
+      {
+        "pid": 4106,
+        "ppid": 4102,
+        "name": "zsh",
+        "command": "zsh --project /Users/user/code/example",
+        "footprint_bytes": 270705333,
+        "cpu_pct": 0.4,
+        "age_seconds": 12600
+      },
+      {
+        "pid": 4107,
+        "ppid": 4102,
+        "name": "rg",
+        "command": "rg --project /Users/user/code/example",
+        "footprint_bytes": 187989814,
+        "cpu_pct": 0.3,
+        "age_seconds": 12600
+      }
+    ],
+    "bundle_path": null
+  },
+  "process": {
+    "pid": 4102,
+    "ppid": 4001,
+    "started": "2026-11-16T09:30:00",
+    "command": "claude --resume demo-web-app",
+    "cwd": "/Users/user/repos/web-app",
+    "ancestry": [
+      {
+        "pid": 4001,
+        "command": "Code Editor"
+      }
+    ]
+  },
+  "history": {
+    "samples": 18,
+    "span_min": 30,
+    "footprint_first_bytes": 8697308774,
+    "footprint_last_bytes": 10093173145,
+    "avg_cpu_pct": 12.4
+  },
+  "reveal": [
+    {
+      "label": "project",
+      "argv": [
+        "open",
+        "/Users/user/repos/web-app"
+      ],
+      "command": "open /Users/user/repos/web-app"
+    }
+  ],
+  "schema_version": 3,
+  "totals_inclusive": {
+    "accounting": "inclusive",
+    "nested_workloads": 0,
+    "footprint_bytes": 10093173145,
+    "processes": 6
+  },
+  "suggested_rule": {
+    "name": "...",
+    "cwd": "^/Users/user/code/web-app(?:/|$)",
+    "_matches_now": 9
+  }
+}

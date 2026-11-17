@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Kilo",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@kilocode/cli/bin/kilo$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [
+      "serve",
+      "acp"
+    ],
+    "headless_commands": [
+      [
+        "run"
+      ]
+    ]
+  },
+  {
+    "name": "Continue",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@continuedev/cli/dist/cn\\.js$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "headless_flags": [
+      "-p"
+    ],
+    "value_flags": [
+      "-p"
+    ]
+  },
+  {
+    "name": "Devin",
+    "executables": [],
+    "executable_patterns": [
+      "/\\.local/share/(?:devin|cognition)/cli/_versions/[^/]+/bin/devin$"
+    ],
+    "argv_patterns": [],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume",
+      "-r"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "headless_flags": [
+      "--print",
+      "-p"
+    ],
+    "value_flags": [
+      "-p",
+      "--print"
+    ],
+    "excluded_flags": [
+      "--cloud"
+    ]
+  },
+  {
+    "name": "Auggie",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@augmentcode/auggie/augment\\.mjs$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "headless_flags": [
+      "--print",
+      "-p"
+    ],
+    "value_flags": [
+      "-p",
+      "--print",
+      "--mode",
+      "--session"
+    ]
+  }
+]

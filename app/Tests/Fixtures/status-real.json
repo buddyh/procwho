@@ -1,0 +1,164 @@
+{
+  "observed_at_unix": 1794625048,
+  "schema_version": 3,
+  "generated_unix": 1794625048,
+  "collect_ms": 3155,
+  "cpu_interval_s": 4.2,
+  "system": {
+    "ncpu": 12,
+    "mem_total_bytes": 51539607552,
+    "swap_used_bytes": 22681223168,
+    "swap_total_bytes": 23622320128, "swap_disk_free_bytes": 55834574848, "swap_disk_total_bytes": 536870912000,
+    "load1": 450.5,
+    "disk_free_bytes": 19282194432,
+    "disk_total_bytes": 994662584320,
+    "mem_used_bytes": 36077725286,
+    "mem_available_bytes": 15461882266,
+    "mem_compressed_bytes": 4294967296,
+    "mem_wired_bytes": 3221225472,
+    "memory_pressure": "normal"
+  },
+  "totals": {
+    "accounting": "exclusive",
+    "processes": 3804,
+    "workloads": 255,
+    "footprint_bytes": 92079181120,
+    "unreadable_processes": 219,
+    "agent_bytes": 0,
+    "agent_associated_bytes": 0,
+    "agent_associated_medium_bytes": 0
+  },
+  "by_kind": [
+    {
+      "accounting": "exclusive",
+      "kind": "simulator",
+      "workloads": 9,
+      "processes": 2206,
+      "footprint_bytes": 23010434920,
+      "cpu_pct": 524.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "app",
+      "workloads": 42,
+      "processes": 183,
+      "footprint_bytes": 13125955320,
+      "cpu_pct": 17.9
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "service",
+      "workloads": 58,
+      "processes": 75,
+      "footprint_bytes": 12090563944,
+      "cpu_pct": 9.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "unknown",
+      "workloads": 6,
+      "processes": 41,
+      "footprint_bytes": 8201705696,
+      "cpu_pct": 129.9
+    }
+  ],
+  "workloads": [
+    {
+      "accounting": "exclusive",
+      "key": "system:apple",
+      "name": "macOS services (Apple launchd jobs)",
+      "kind": "system",
+      "confidence": "exact",
+      "processes": 331,
+      "footprint_bytes": 6794095568,
+      "rss_bytes": 2582626304,
+      "cpu_pct": 12.6,
+      "age_seconds": 177092,
+      "ports": [
+        "3283",
+        "8780",
+        "15110",
+        "15240",
+        "18093",
+        "49162",
+        "63712",
+        "63713"
+      ],
+      "inside": null,
+      "session_id": null,
+      "project_path": null,
+      "root_pid": 551,
+      "agent_link": null
+    },
+    {
+      "accounting": "exclusive",
+      "key": "launchd:com.example.preview",
+      "name": "com.example.preview",
+      "kind": "service",
+      "confidence": "exact",
+      "processes": 2,
+      "footprint_bytes": 5421298264,
+      "rss_bytes": 77316096,
+      "cpu_pct": 2.5,
+      "age_seconds": 14163,
+      "ports": [
+        "4180"
+      ],
+      "inside": null,
+      "session_id": null,
+      "project_path": null,
+      "root_pid": 80415,
+      "agent_link": null
+    },
+    {
+      "accounting": "exclusive",
+      "key": "unknown:SimMetalHost",
+      "name": "UNKNOWN owner: SimMetalHost",
+      "kind": "unknown",
+      "confidence": "none",
+      "processes": 27,
+      "footprint_bytes": 5175557192,
+      "rss_bytes": 446054400,
+      "cpu_pct": 82.6,
+      "age_seconds": 6096,
+      "ports": [],
+      "inside": null,
+      "session_id": null,
+      "project_path": null,
+      "root_pid": 21439,
+      "agent_link": null
+    }
+  ],
+  "findings": [
+    {
+      "severity": "review",
+      "title": "Working directory deleted under T3 Code · Codex tool set · started 09:56",
+      "workload_key": "toolset:30969:1794581784",
+      "reasons": [
+        "1 cwd path(s) no longer exist, e.g. /Users/user/repo-8/plugins/cache/openai-curated-remote/data-analytics/1.1.0-exp-homepage"
+      ],
+      "not_proven": [
+        "that the process is useless"
+      ],
+      "basis": "snapshot"
+    },
+    {
+      "severity": "review",
+      "title": "Working directory deleted under Detached 'node', launched via T3 Code (Nightly)",
+      "workload_key": "detached:node::T3 Code (Nightly)",
+      "reasons": [
+        "1 cwd path(s) no longer exist, e.g. /private/var/folders/<tmp>"
+      ],
+      "not_proven": [
+        "that the process is useless"
+      ],
+      "basis": "snapshot"
+    }
+  ],
+  "sources": {
+    "launchctl": true,
+    "lsof_ports": true,
+    "tmux": true,
+    "repo-9": "Local service service metadata 355s old"
+  }
+}

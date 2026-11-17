@@ -1,0 +1,18 @@
+[package]
+name = "procwho-mcp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish = false
+description = "Read-only procwho tools over MCP stdio"
+keywords = ["macos", "process", "workload", "git", "worktree"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+procwho-proc = { path = "../procwho-proc" }
+procwho-wt = { path = "../procwho-wt" }
+serde.workspace = true
+serde_json.workspace = true
+regex = { workspace = true, features = ["unicode-case"] }

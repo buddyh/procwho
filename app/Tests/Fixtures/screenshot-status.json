@@ -1,0 +1,2595 @@
+{
+  "worktree_roots": [
+    "/Users/user/code",
+    "/Users/user/projects"
+  ],
+  "observed_at_unix": 1794758400,
+  "collect_ms": 0,
+  "schema_version": 3,
+  "generated_unix": 1794758400,
+  "system": {
+    "ncpu": 12,
+    "disk_free_bytes": 128849018880,
+    "disk_total_bytes": 1099511627776,
+    "mem_total_bytes": 51539607552,
+    "mem_used_bytes": 30064771072,
+    "swap_used_bytes": 3435973836,
+    "swap_total_bytes": 8589934592,
+    "swap_disk_free_bytes": 55834574848,
+    "swap_disk_total_bytes": 536870912000,
+    "load1": 4.8,
+    "mem_available_bytes": 21474836480,
+    "mem_compressed_bytes": 4294967296,
+    "mem_wired_bytes": 3221225472,
+    "memory_pressure": "normal"
+  },
+  "totals": {
+    "accounting": "exclusive",
+    "processes": 912,
+    "workloads": 34,
+    "footprint_bytes": 24588687766,
+    "agent_bytes": 15569256446,
+    "agent_associated_bytes": 19756849559,
+    "agent_associated_medium_bytes": 1717986918
+  },
+  "by_kind": [
+    {
+      "accounting": "exclusive",
+      "kind": "agent-session",
+      "workloads": 2,
+      "processes": 9,
+      "footprint_bytes": 11274289151,
+      "cpu_pct": 14.4
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "agent-toolset",
+      "workloads": 1,
+      "processes": 8,
+      "footprint_bytes": 3435973836,
+      "cpu_pct": 3.1
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "agent-host",
+      "workloads": 1,
+      "processes": 4,
+      "footprint_bytes": 858993459,
+      "cpu_pct": 0.7
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "detached",
+      "workloads": 1,
+      "processes": 2,
+      "footprint_bytes": 1717986918,
+      "cpu_pct": 0.1
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "service",
+      "workloads": 1,
+      "processes": 3,
+      "footprint_bytes": 751619276,
+      "cpu_pct": 1.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "app",
+      "workloads": 1,
+      "processes": 12,
+      "footprint_bytes": 2469606195,
+      "cpu_pct": 2.8
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "system",
+      "workloads": 1,
+      "processes": 216,
+      "footprint_bytes": 4080218931,
+      "cpu_pct": 4.1
+    }
+  ],
+  "workloads": [
+    {
+      "accounting": "exclusive",
+      "key": "session:web-app",
+      "name": "Claude session: web-app",
+      "kind": "agent-session",
+      "confidence": "exact",
+      "footprint_bytes": 10093173145,
+      "rss_bytes": 2147483648,
+      "processes": 6,
+      "cpu_pct": 14.2,
+      "age_seconds": 12600,
+      "ports": [
+        "3000"
+      ],
+      "inside": "Code editor",
+      "project_path": "/Users/user/repos/web-app",
+      "root_pid": 4102,
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Claude Code"
+      },
+      "bundle_path": null,
+      "members": [
+        {
+          "pid": 4102,
+          "ppid": 1,
+          "name": "claude",
+          "command": "claude --project /Users/user/code/example",
+          "footprint_bytes": 6767633325,
+          "cpu_pct": 9.5,
+          "age_seconds": 12600
+        },
+        {
+          "pid": 4103,
+          "ppid": 4102,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 1691908331,
+          "cpu_pct": 2.4,
+          "age_seconds": 12600
+        },
+        {
+          "pid": 4104,
+          "ppid": 4102,
+          "name": "typescript-language-server",
+          "command": "typescript-language-server --project /Users/user/code/example",
+          "footprint_bytes": 751959258,
+          "cpu_pct": 1.1,
+          "age_seconds": 12600
+        },
+        {
+          "pid": 4105,
+          "ppid": 4102,
+          "name": "git",
+          "command": "git --project /Users/user/code/example",
+          "footprint_bytes": 422977082,
+          "cpu_pct": 0.6,
+          "age_seconds": 12600
+        },
+        {
+          "pid": 4106,
+          "ppid": 4102,
+          "name": "zsh",
+          "command": "zsh --project /Users/user/code/example",
+          "footprint_bytes": 270705333,
+          "cpu_pct": 0.4,
+          "age_seconds": 12600
+        },
+        {
+          "pid": 4107,
+          "ppid": 4102,
+          "name": "rg",
+          "command": "rg --project /Users/user/code/example",
+          "footprint_bytes": 187989814,
+          "cpu_pct": 0.3,
+          "age_seconds": 12600
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "toolset:api-server",
+      "name": "api-server \u00b7 Codex tool set",
+      "kind": "agent-toolset",
+      "confidence": "exact",
+      "footprint_bytes": 3435973836,
+      "rss_bytes": 2576980377,
+      "processes": 8,
+      "cpu_pct": 3.1,
+      "age_seconds": 4200,
+      "ports": [],
+      "inside": "Code editor",
+      "project_path": null,
+      "root_pid": 5200,
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Codex"
+      },
+      "bundle_path": null,
+      "members": [
+        {
+          "pid": 5200,
+          "ppid": 1,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 2249524832,
+          "cpu_pct": 2.0,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5201,
+          "ppid": 5200,
+          "name": "esbuild",
+          "command": "esbuild --project /Users/user/code/example",
+          "footprint_bytes": 562381208,
+          "cpu_pct": 0.5,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5202,
+          "ppid": 5200,
+          "name": "tsserver",
+          "command": "tsserver --project /Users/user/code/example",
+          "footprint_bytes": 249947203,
+          "cpu_pct": 0.2,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5203,
+          "ppid": 5200,
+          "name": "watcher",
+          "command": "watcher --project /Users/user/code/example",
+          "footprint_bytes": 140595302,
+          "cpu_pct": 0.1,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5204,
+          "ppid": 5200,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 89980993,
+          "cpu_pct": 0.1,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5205,
+          "ppid": 5200,
+          "name": "esbuild",
+          "command": "esbuild --project /Users/user/code/example",
+          "footprint_bytes": 62486800,
+          "cpu_pct": 0.1,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5206,
+          "ppid": 5200,
+          "name": "tsserver",
+          "command": "tsserver --project /Users/user/code/example",
+          "footprint_bytes": 45908670,
+          "cpu_pct": 0.0,
+          "age_seconds": 4200
+        },
+        {
+          "pid": 5207,
+          "ppid": 5200,
+          "name": "watcher",
+          "command": "watcher --project /Users/user/code/example",
+          "footprint_bytes": 35148825,
+          "cpu_pct": 0.0,
+          "age_seconds": 4200
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "session:docs-site",
+      "name": "Claude session: docs-site",
+      "kind": "agent-session",
+      "confidence": "exact",
+      "footprint_bytes": 1181116006,
+      "rss_bytes": 858993459,
+      "processes": 3,
+      "cpu_pct": 0.2,
+      "age_seconds": 1800,
+      "ports": [],
+      "inside": "Code editor",
+      "project_path": null,
+      "root_pid": 6200,
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Claude Code"
+      },
+      "bundle_path": null,
+      "members": [
+        {
+          "pid": 6200,
+          "ppid": 1,
+          "name": "claude",
+          "command": "claude --project /Users/user/code/example",
+          "footprint_bytes": 867758698,
+          "cpu_pct": 0.1,
+          "age_seconds": 1800
+        },
+        {
+          "pid": 6201,
+          "ppid": 6200,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 216939674,
+          "cpu_pct": 0.0,
+          "age_seconds": 1800
+        },
+        {
+          "pid": 6202,
+          "ppid": 6200,
+          "name": "typescript-language-server",
+          "command": "typescript-language-server --project /Users/user/code/example",
+          "footprint_bytes": 96417633,
+          "cpu_pct": 0.0,
+          "age_seconds": 1800
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "host:editor",
+      "name": "Code editor agent host",
+      "kind": "agent-host",
+      "confidence": "exact",
+      "footprint_bytes": 858993459,
+      "rss_bytes": 644245094,
+      "processes": 4,
+      "cpu_pct": 0.7,
+      "age_seconds": 28800,
+      "ports": [],
+      "inside": "Code editor",
+      "project_path": null,
+      "root_pid": 7200,
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Codex"
+      },
+      "bundle_path": null,
+      "members": [
+        {
+          "pid": 7200,
+          "ppid": 1,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 603390527,
+          "cpu_pct": 0.5,
+          "age_seconds": 28800
+        },
+        {
+          "pid": 7201,
+          "ppid": 7200,
+          "name": "esbuild",
+          "command": "esbuild --project /Users/user/code/example",
+          "footprint_bytes": 150847631,
+          "cpu_pct": 0.1,
+          "age_seconds": 28800
+        },
+        {
+          "pid": 7202,
+          "ppid": 7200,
+          "name": "tsserver",
+          "command": "tsserver --project /Users/user/code/example",
+          "footprint_bytes": 67043391,
+          "cpu_pct": 0.1,
+          "age_seconds": 28800
+        },
+        {
+          "pid": 7203,
+          "ppid": 7200,
+          "name": "watcher",
+          "command": "watcher --project /Users/user/code/example",
+          "footprint_bytes": 37711907,
+          "cpu_pct": 0.0,
+          "age_seconds": 28800
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "detached:node",
+      "name": "Detached 'node' dev server",
+      "kind": "detached",
+      "confidence": "medium",
+      "footprint_bytes": 1717986918,
+      "rss_bytes": 429496729,
+      "processes": 2,
+      "cpu_pct": 0.1,
+      "age_seconds": 172800,
+      "ports": [
+        "5173"
+      ],
+      "inside": null,
+      "project_path": null,
+      "root_pid": 8200,
+      "agent_link": {
+        "relation": "launched_by_agent",
+        "via": "responsible app: Cursor",
+        "confidence": "medium",
+        "agent_product": "Cursor"
+      },
+      "bundle_path": null,
+      "members": [
+        {
+          "pid": 8200,
+          "ppid": 1,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 1374389534,
+          "cpu_pct": 0.1,
+          "age_seconds": 172800
+        },
+        {
+          "pid": 8201,
+          "ppid": 8200,
+          "name": "esbuild",
+          "command": "esbuild --project /Users/user/code/example",
+          "footprint_bytes": 343597383,
+          "cpu_pct": 0.0,
+          "age_seconds": 172800
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "service:api",
+      "name": "API development server",
+      "kind": "service",
+      "confidence": "exact",
+      "footprint_bytes": 751619276,
+      "rss_bytes": 644245094,
+      "processes": 3,
+      "cpu_pct": 1.5,
+      "age_seconds": 3800,
+      "ports": [
+        "8080"
+      ],
+      "inside": null,
+      "project_path": null,
+      "root_pid": 9200,
+      "agent_link": null,
+      "bundle_path": null,
+      "members": [
+        {
+          "pid": 9200,
+          "ppid": 1,
+          "name": "node",
+          "command": "node --project /Users/user/code/example",
+          "footprint_bytes": 552210080,
+          "cpu_pct": 1.1,
+          "age_seconds": 3800
+        },
+        {
+          "pid": 9201,
+          "ppid": 9200,
+          "name": "esbuild",
+          "command": "esbuild --project /Users/user/code/example",
+          "footprint_bytes": 138052520,
+          "cpu_pct": 0.3,
+          "age_seconds": 3800
+        },
+        {
+          "pid": 9202,
+          "ppid": 9200,
+          "name": "tsserver",
+          "command": "tsserver --project /Users/user/code/example",
+          "footprint_bytes": 61356675,
+          "cpu_pct": 0.1,
+          "age_seconds": 3800
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "app:xcode",
+      "name": "Safari (app)",
+      "kind": "app",
+      "confidence": "exact",
+      "footprint_bytes": 2469606195,
+      "rss_bytes": 2040109465,
+      "processes": 12,
+      "cpu_pct": 2.8,
+      "age_seconds": 21600,
+      "ports": [],
+      "inside": null,
+      "project_path": null,
+      "root_pid": 10200,
+      "agent_link": {
+        "relation": "agent_host_app",
+        "via": "nested agent session",
+        "confidence": "high",
+        "agent_product": "Cursor"
+      },
+      "bundle_path": "/Applications/Safari.app",
+      "members": [
+        {
+          "pid": 10200,
+          "ppid": 1,
+          "name": "Safari",
+          "command": "Safari --project /Users/user/code/example",
+          "footprint_bytes": 1578046684,
+          "cpu_pct": 1.8,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10201,
+          "ppid": 10200,
+          "name": "WebKit Web Content",
+          "command": "WebKit Web Content --project /Users/user/code/example",
+          "footprint_bytes": 394511671,
+          "cpu_pct": 0.4,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10202,
+          "ppid": 10200,
+          "name": "WebKit Networking",
+          "command": "WebKit Networking --project /Users/user/code/example",
+          "footprint_bytes": 175338520,
+          "cpu_pct": 0.2,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10203,
+          "ppid": 10200,
+          "name": "WebKit GPU",
+          "command": "WebKit GPU --project /Users/user/code/example",
+          "footprint_bytes": 98627917,
+          "cpu_pct": 0.1,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10204,
+          "ppid": 10200,
+          "name": "Safari",
+          "command": "Safari --project /Users/user/code/example",
+          "footprint_bytes": 63121867,
+          "cpu_pct": 0.1,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10205,
+          "ppid": 10200,
+          "name": "WebKit Web Content",
+          "command": "WebKit Web Content --project /Users/user/code/example",
+          "footprint_bytes": 43834630,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10206,
+          "ppid": 10200,
+          "name": "WebKit Networking",
+          "command": "WebKit Networking --project /Users/user/code/example",
+          "footprint_bytes": 32205034,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10207,
+          "ppid": 10200,
+          "name": "WebKit GPU",
+          "command": "WebKit GPU --project /Users/user/code/example",
+          "footprint_bytes": 24656979,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10208,
+          "ppid": 10200,
+          "name": "Safari",
+          "command": "Safari --project /Users/user/code/example",
+          "footprint_bytes": 19482057,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10209,
+          "ppid": 10200,
+          "name": "WebKit Web Content",
+          "command": "WebKit Web Content --project /Users/user/code/example",
+          "footprint_bytes": 15780466,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10210,
+          "ppid": 10200,
+          "name": "WebKit Networking",
+          "command": "WebKit Networking --project /Users/user/code/example",
+          "footprint_bytes": 13041708,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        },
+        {
+          "pid": 10211,
+          "ppid": 10200,
+          "name": "WebKit GPU",
+          "command": "WebKit GPU --project /Users/user/code/example",
+          "footprint_bytes": 10958657,
+          "cpu_pct": 0.0,
+          "age_seconds": 21600
+        }
+      ]
+    },
+    {
+      "accounting": "exclusive",
+      "key": "system:macos",
+      "name": "macOS services",
+      "kind": "system",
+      "confidence": "exact",
+      "footprint_bytes": 4080218931,
+      "rss_bytes": 3328599654,
+      "processes": 216,
+      "cpu_pct": 4.1,
+      "age_seconds": 259200,
+      "ports": [],
+      "inside": null,
+      "project_path": null,
+      "root_pid": 11200,
+      "agent_link": null,
+      "members": [
+        {
+          "pid": 11200,
+          "ppid": 1,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 2487460389,
+          "cpu_pct": 2.5,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11201,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 621865097,
+          "cpu_pct": 0.6,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11202,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 276384487,
+          "cpu_pct": 0.3,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11203,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 155466274,
+          "cpu_pct": 0.2,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11204,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 99498415,
+          "cpu_pct": 0.1,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11205,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 69096121,
+          "cpu_pct": 0.1,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11206,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 50764497,
+          "cpu_pct": 0.1,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11207,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 38866568,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11208,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 30709387,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11209,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 24874603,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11210,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 20557523,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11211,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 17274030,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11212,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 14718700,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11213,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 12691124,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11214,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 11055379,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11215,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 9716642,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11216,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 8607129,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11217,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 7677346,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11218,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 6890471,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11219,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 6218650,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11220,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 5640499,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11221,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 5139380,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11222,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 4702193,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11223,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 4318507,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11224,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 3979936,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11225,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 3679675,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11226,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 3412154,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11227,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 3172781,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11228,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 2957741,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11229,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 2763844,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11230,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 2588408,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11231,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 2429160,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11232,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 2284169,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11233,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 2151782,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11234,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 2030579,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11235,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 1919336,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11236,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 1816990,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11237,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 1722617,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11238,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 1635411,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11239,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 1554662,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11240,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 1479750,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11241,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 1410124,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11242,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 1345300,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11243,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 1284845,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11244,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 1228375,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11245,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 1175548,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11246,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 1126057,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11247,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 1079626,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11248,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 1036010,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11249,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 994984,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11250,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 956347,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11251,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 919918,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11252,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 885532,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11253,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 853038,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11254,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 822300,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11255,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 793195,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11256,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 765607,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11257,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 739435,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11258,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 714582,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11259,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 690961,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11260,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 668492,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11261,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 647102,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11262,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 626722,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11263,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 607290,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11264,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 588748,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11265,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 571042,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11266,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 554123,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11267,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 537945,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11268,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 522465,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11269,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 507644,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11270,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 493445,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11271,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 479834,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11272,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 466778,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11273,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 454247,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11274,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 442215,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11275,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 430654,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11276,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 419541,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11277,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 408852,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11278,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 398567,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11279,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 388665,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11280,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 379128,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11281,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 369937,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11282,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 361077,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11283,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 352531,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11284,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 344285,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11285,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 336325,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11286,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 328637,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11287,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 321211,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11288,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 314033,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11289,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 307093,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11290,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 300381,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11291,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 293887,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11292,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 287600,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11293,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 281514,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11294,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 275618,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11295,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 269906,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11296,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 264370,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11297,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 259002,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11298,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 253796,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11299,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 248746,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11300,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 243844,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11301,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 239086,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11302,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 234466,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11303,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 229979,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11304,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 225619,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11305,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 221383,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11306,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 217264,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11307,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 213259,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11308,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 209364,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11309,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 205575,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11310,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 201887,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11311,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 198298,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11312,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 194804,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11313,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 191401,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11314,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 188087,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11315,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 184858,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11316,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 181712,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11317,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 178645,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11318,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 175655,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11319,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 172740,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11320,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 169896,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11321,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 167123,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11322,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 164416,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11323,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 161775,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11324,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 159197,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11325,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 156680,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11326,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 154222,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11327,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 151822,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11328,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 149477,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11329,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 147187,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11330,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 144948,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11331,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 142760,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11332,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 140621,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11333,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 138530,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11334,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 136486,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11335,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 134486,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11336,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 132530,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11337,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 130616,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11338,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 128743,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11339,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 126911,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11340,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 125117,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11341,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 123361,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11342,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 121642,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11343,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 119958,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11344,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 118309,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11345,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 116694,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11346,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 115112,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11347,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 113561,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11348,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 112042,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11349,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 110553,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11350,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 109094,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11351,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 107663,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11352,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 106260,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11353,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 104885,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11354,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 103536,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11355,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 102213,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11356,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 100915,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11357,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 99641,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11358,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 98392,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11359,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 97166,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11360,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 95963,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11361,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 94782,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11362,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 93622,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11363,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 92484,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11364,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 91366,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11365,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 90269,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11366,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 89191,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11367,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 88132,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11368,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 87092,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11369,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 86071,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11370,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 85067,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11371,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 84081,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11372,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 83112,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11373,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 82159,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11374,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 81223,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11375,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 80302,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11376,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 79398,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11377,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 78508,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11378,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 77633,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11379,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 76773,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11380,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 75927,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11381,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 75095,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11382,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 74276,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11383,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 73471,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11384,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 72679,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11385,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 71900,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11386,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 71133,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11387,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 70378,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11388,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 69635,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11389,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 68904,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11390,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 68185,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11391,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 67476,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11392,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 66779,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11393,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 66092,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11394,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 65416,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11395,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 64750,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11396,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 64094,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11397,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 63449,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11398,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 62813,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11399,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 62186,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11400,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 61569,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11401,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 60961,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11402,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 60362,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11403,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 59771,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11404,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 59190,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11405,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 58616,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11406,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 58051,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11407,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 57494,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11408,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 56946,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11409,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 56404,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11410,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 55871,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11411,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 55345,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11412,
+          "ppid": 11200,
+          "name": "launchd",
+          "command": "launchd --project /Users/user/code/example",
+          "footprint_bytes": 54827,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11413,
+          "ppid": 11200,
+          "name": "WindowServer",
+          "command": "WindowServer --project /Users/user/code/example",
+          "footprint_bytes": 54316,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11414,
+          "ppid": 11200,
+          "name": "kernel_task",
+          "command": "kernel_task --project /Users/user/code/example",
+          "footprint_bytes": 53812,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        },
+        {
+          "pid": 11415,
+          "ppid": 11200,
+          "name": "sysmond",
+          "command": "sysmond --project /Users/user/code/example",
+          "footprint_bytes": 53314,
+          "cpu_pct": 0.0,
+          "age_seconds": 259200
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "review",
+      "title": "Detached server has no active session",
+      "workload_key": "detached:node",
+      "reasons": [
+        "The parent session has ended; port 5173 is still open."
+      ],
+      "not_proven": [
+        "Whether another client still needs this server."
+      ],
+      "basis": "snapshot"
+    }
+  ],
+  "sources": {
+    "launchctl": true,
+    "lsof_ports": true,
+    "tmux": true
+  }
+}

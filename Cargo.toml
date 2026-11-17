@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = ["crates/procwho-proc", "crates/procwho-wt", "crates/procwho-cli", "crates/procwho-mcp"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/buddyh/procwho"
+rust-version = "1.88"
+
+[workspace.dependencies]
+libc = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = { version = "1", default-features = false, features = ["std", "perf", "unicode-perl"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+strip = true
+panic = "abort"
+
+# Build-time proc-macro dylibs must remain loadable by the macOS host toolchain.
+[profile.release.build-override]
+strip = "none"

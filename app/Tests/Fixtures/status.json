@@ -1,0 +1,134 @@
+{
+  "observed_at_unix": 1794600000,
+  "schema_version": 3,
+  "generated_unix": 1794600000,
+  "collect_ms": 180,
+  "cpu_interval_s": 1.0,
+  "future_field": {
+    "anything": [
+      1,
+      2,
+      3
+    ]
+  },
+  "system": {
+    "ncpu": 12,
+    "mem_total_bytes": 51539607552,
+    "swap_used_bytes": 0,
+    "swap_total_bytes": 0, "swap_disk_free_bytes": 55834574848, "swap_disk_total_bytes": 536870912000,
+    "load1": 3.2,
+    "disk_free_bytes": 0,
+    "disk_total_bytes": 0,
+    "mem_used_bytes": 36077725286,
+    "mem_available_bytes": 15461882266,
+    "mem_compressed_bytes": 4294967296,
+    "mem_wired_bytes": 3221225472,
+    "memory_pressure": "normal"
+  },
+  "totals": {
+    "accounting": "exclusive",
+    "processes": 1700,
+    "workloads": 250,
+    "footprint_bytes": 0,
+    "unreadable_processes": 216,
+    "agent_bytes": 26199300505,
+    "agent_associated_bytes": 26199300505,
+    "agent_associated_medium_bytes": 0
+  },
+  "by_kind": [
+    {
+      "accounting": "exclusive",
+      "kind": "agent-session",
+      "workloads": 17,
+      "processes": 85,
+      "footprint_bytes": 25125558681,
+      "cpu_pct": 12.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "agent-host",
+      "workloads": 1,
+      "processes": 3,
+      "footprint_bytes": 1073741824,
+      "cpu_pct": 0.5
+    },
+    {
+      "accounting": "exclusive",
+      "kind": "app",
+      "workloads": 40,
+      "processes": 170,
+      "footprint_bytes": 9000000000,
+      "cpu_pct": 30.0
+    }
+  ],
+  "workloads": [
+    {
+      "accounting": "exclusive",
+      "key": "session:4201:1001",
+      "name": "Claude session: web-app [via T3 Code (Nightly)]",
+      "kind": "agent-session",
+      "confidence": "exact",
+      "processes": 4,
+      "footprint_bytes": 0,
+      "rss_bytes": 0,
+      "cpu_pct": 0.4,
+      "age_seconds": 3600,
+      "ports": [
+        "3001"
+      ],
+      "inside": "T3 Code (Nightly) (app)",
+      "session_id": null,
+      "project_path": "/Users/user/repos/web-app",
+      "root_pid": 8689,
+      "agent_link": {
+        "relation": "agent",
+        "via": "agent workload",
+        "confidence": "high",
+        "agent_product": "Claude Code"
+      }
+    },
+    {
+      "accounting": "exclusive",
+      "key": "detached:node",
+      "name": "Detached 'node'",
+      "kind": "detached",
+      "confidence": "medium",
+      "processes": 1,
+      "footprint_bytes": 1048576,
+      "cpu_pct": 0.0,
+      "ports": [
+        3002
+      ],
+      "agent_link": null
+    },
+    {
+      "name": "row without a key is skipped",
+      "agent_link": null
+    }
+  ],
+  "findings": [
+    {
+      "severity": "review",
+      "title": "...",
+      "workload_key": "session:4201:1001",
+      "reasons": [
+        "..."
+      ],
+      "not_proven": [
+        "..."
+      ],
+      "basis": "trend (11 intervals, 6 min)"
+    },
+    {
+      "severity": "info",
+      "title": "info finding",
+      "workload_key": null
+    }
+  ],
+  "sources": {
+    "launchctl": true,
+    "lsof_ports": false,
+    "tmux": true,
+    "web-app": "Local service service metadata 12s old"
+  }
+}

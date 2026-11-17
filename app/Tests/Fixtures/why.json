@@ -1,0 +1,95 @@
+{
+  "observed_at_unix": 1794825000,
+  "collect_ms": 0,
+  "workload": {
+    "name": "Claude session: repo-3 [via T3 Code (Nightly)]",
+    "key": "session:4202:1002",
+    "kind": "agent-session",
+    "confidence": "exact",
+    "evidence": [
+      "claude agent binary (/Users/user/.local/share/claude/versions/2.1.325)",
+      "session id read from argv (exact)",
+      "T3CODE_THREAD_ID in process environment (exact T3 thread)"
+    ],
+    "identity": [
+      "session demo-session",
+      "T3 thread demo-thread"
+    ],
+    "inside": "T3 Code (Nightly) (app)",
+    "processes": 6,
+    "footprint_bytes": 842389496,
+    "rss_bytes": 409698304,
+    "cpu_pct": null,
+    "ports": [],
+    "zombies": 0,
+    "if_stopped": [
+      "ends this agent session and its child commands"
+    ],
+    "cpu_sample_state": "not_sampled",
+    "cpu_interval_s": null,
+    "accounting": "exclusive",
+    "agent_link": {
+      "relation": "agent",
+      "via": "agent workload",
+      "confidence": "high",
+      "agent_product": "Claude Code"
+    }
+  },
+  "declared_owner": null,
+  "declared_notes": null,
+  "totals_inclusive": {
+    "accounting": "inclusive",
+    "nested_workloads": 0,
+    "footprint_bytes": 842389496,
+    "processes": 6
+  },
+  "history": null,
+  "process": {
+    "pid": 4202,
+    "instance_id": 1002,
+    "started": "2026-11-13T20:23:52",
+    "ppid": 4100,
+    "command": "claude --resume demo-session",
+    "cwd": "/Users/user/repos/repo-3",
+    "footprint_bytes": 328730472,
+    "watches": null,
+    "exe": "/Users/user/.local/share/claude/versions/2.1.325",
+    "tty": "",
+    "cpu_time_s": 105.545357375,
+    "memory_bytes": 328730472,
+    "ancestry": [
+      {
+        "pid": 4100,
+        "command": "/Applications/T3 Code.app/Contents/MacOS/T3 Code"
+      }
+    ],
+    "original_parent": null,
+    "descendants": 5
+  },
+  "reveal": [
+    {
+      "label": "project",
+      "argv": [
+        "open",
+        "/Users/user/repos/repo-3"
+      ],
+      "command": "open /Users/user/repos/repo-3"
+    },
+    {
+      "label": "session",
+      "argv": [
+        "example-tool",
+        "search",
+        "demo-session"
+      ],
+      "command": "example-tool search demo-session"
+    }
+  ],
+  "read_only": "procwho is read-only. Nothing here is a recommendation to stop anything.",
+  "schema_version": 3,
+  "suggested_rule": {
+    "name": "...",
+    "cwd": "^/Users/user/code/web-app(?:/|$)",
+    "_matches_now": 9
+  }
+}

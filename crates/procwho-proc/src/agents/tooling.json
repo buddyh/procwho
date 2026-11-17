@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Aider",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/(?:uv/tools|pipx/venvs)/aider-chat/bin/aider$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "headless_flags": [
+      "--message",
+      "--msg",
+      "-m",
+      "--message-file",
+      "-f"
+    ],
+    "value_flags": [
+      "--message",
+      "--msg",
+      "-m",
+      "--message-file",
+      "-f"
+    ]
+  },
+  {
+    "name": "Goose",
+    "executables": [],
+    "executable_patterns": [
+      "/Cellar/block-goose-cli/[^/]+/bin/goose$"
+    ],
+    "argv_patterns": [],
+    "session_identity": "none",
+    "shared_host_subcommands": [
+      "serve"
+    ],
+    "session_flags": [
+      "--session-id"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "headless_commands": [
+      [
+        "run"
+      ]
+    ]
+  },
+  {
+    "name": "GitHub Copilot",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@github/copilot/npm-loader\\.js$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "host_flags": [
+      [
+        "--headless"
+      ]
+    ],
+    "headless_flags": [
+      "-p",
+      "--prompt"
+    ],
+    "value_flags": [
+      "-p",
+      "--prompt"
+    ]
+  },
+  {
+    "name": "Cline",
+    "executables": [],
+    "executable_patterns": [
+      "/node_modules/cline/bin/\\.cline$",
+      "/@cline/cli-darwin-(?:arm64|x64)(?:-[^/]+)?/bin/cline$"
+    ],
+    "argv_patterns": [
+      "/node_modules/cline/bin/cline$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--id"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "excluded_flags": [
+      "--zen"
+    ],
+    "excluded_commands": [
+      [
+        "hub"
+      ]
+    ]
+  },
+  {
+    "name": "Aider",
+    "executables": [
+      "python",
+      "python3",
+      "Python",
+      "python3.9",
+      "python3.10",
+      "python3.11",
+      "python3.12",
+      "python3.13",
+      "python3.14",
+      "python3.15"
+    ],
+    "required_argv": [
+      "-m=aider"
+    ],
+    "value_flags": [
+      "-m"
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Cursor",
+    "executables": [],
+    "executable_patterns": [
+      "/cursor-agent/versions/[^/]+/cursor-agent$"
+    ],
+    "argv_patterns": [
+      "/cursor-agent/versions/[^/]+/index\\.js$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume"
+    ],
+    "session_id_pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$",
+    "headless_flags": [
+      "-p",
+      "--print"
+    ],
+    "value_flags": [
+      "-p",
+      "--print"
+    ]
+  },
+  {
+    "name": "Gemini",
+    "executables": [],
+    "executable_patterns": [],
+    "argv_patterns": [
+      "/@google/gemini-cli/(?:bundle/gemini\\.js|dist/index\\.js)$"
+    ],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--resume",
+      "-r"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "headless_flags": [
+      "-p",
+      "--prompt"
+    ],
+    "value_flags": [
+      "-p",
+      "--prompt"
+    ]
+  },
+  {
+    "name": "Antigravity",
+    "executables": [],
+    "executable_patterns": [
+      "/\\.local/bin/agy$"
+    ],
+    "argv_patterns": [],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--conversation"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+  },
+  {
+    "name": "Grok",
+    "executables": [],
+    "executable_patterns": [
+      "/\\.grok/downloads/grok-[^/]+-macos-(?:aarch64|x86_64)$",
+      "/\\.grok/bin/grok$"
+    ],
+    "argv_patterns": [],
+    "session_identity": "none",
+    "shared_host_subcommands": [],
+    "session_flags": [
+      "--session-id",
+      "--resume"
+    ],
+    "session_id_pattern": "(?i)^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+    "host_commands": [
+      [
+        "agent",
+        "stdio"
+      ]
+    ],
+    "headless_flags": [
+      "-p",
+      "--single"
+    ],
+    "value_flags": [
+      "-p",
+      "--single"
+    ]
+  }
+]

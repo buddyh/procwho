@@ -1,0 +1,105 @@
+{
+  "accounting": "exclusive",
+  "observed_at_unix": 1794825000,
+  "schema_version": 3,
+  "generated": "2026-11-13T21:57:21-0500",
+  "processes": 3795,
+  "workloads_total": 252,
+  "workloads_matched": 252,
+  "footprint_sum_bytes": 91421864624,
+  "not_inspectable_processes": 218,
+  "cpu_interval_s": 16.1,
+  "collect_ms": 15114,
+  "sources": {
+    "launchctl": true,
+    "lsof_ports": true,
+    "tmux": true,
+    "repo-9": "Local service service metadata 338s old"
+  },
+  "workloads": [
+    {
+      "name": "macOS services (Apple launchd jobs)",
+      "accounting": "exclusive",
+      "key": "system:apple",
+      "kind": "system",
+      "confidence": "exact",
+      "evidence": [
+        "launchd label com.apple.* / Apple system path",
+        "Apple system executable path (XPC/extension helper)"
+      ],
+      "identity": null,
+      "inside": null,
+      "processes": 331,
+      "footprint_bytes": 6679505944,
+      "rss_bytes": 2500591616,
+      "cpu_pct": 15.3,
+      "cpu_sample_state": "sampled",
+      "cpu_interval_s": 16.1,
+      "ports": [
+        "3283",
+        "8780"
+      ],
+      "zombies": 0,
+      "if_stopped": [
+        "part of macOS; do not stop",
+        "listening TCP ports: 3283, 8780, 15110, 15240, 18093, 49162, 63712, 63713"
+      ],
+      "agent_link": null
+    },
+    {
+      "name": "com.example.preview",
+      "accounting": "exclusive",
+      "key": "launchd:com.example.preview",
+      "kind": "service",
+      "confidence": "exact",
+      "evidence": [
+        "launchd job 'com.example.preview' has this PID (launchctl list)",
+        "plist /Users/user/Library/LaunchAgents/com.example.preview.plist"
+      ],
+      "identity": null,
+      "inside": null,
+      "processes": 2,
+      "footprint_bytes": 5418644056,
+      "rss_bytes": 83968000,
+      "cpu_pct": 2.1,
+      "cpu_sample_state": "sampled",
+      "cpu_interval_s": 16.1,
+      "ports": [
+        "4180"
+      ],
+      "zombies": 0,
+      "if_stopped": [
+        "launchd restarts it immediately (KeepAlive)",
+        "owning supervisor: launchd job com.example.preview; a kill is not the supported way to stop it",
+        "listening TCP ports: 4180"
+      ],
+      "agent_link": null
+    },
+    {
+      "name": "UNKNOWN owner: SimMetalHost",
+      "accounting": "exclusive",
+      "key": "unknown:SimMetalHost",
+      "kind": "unknown",
+      "confidence": "none",
+      "evidence": [
+        "parented by launchd (PPID 1) without being a launchd job: reparented after its parent exited, or it daemonized itself",
+        "original parent unknown: the kernel reports launchd's id, not the original parent's",
+        "cwd / gives no project; no app, label, session or terminal evidence"
+      ],
+      "identity": null,
+      "inside": null,
+      "processes": 27,
+      "footprint_bytes": 5363956712,
+      "rss_bytes": 458817536,
+      "cpu_pct": 100.4,
+      "cpu_sample_state": "sampled",
+      "cpu_interval_s": 16.1,
+      "ports": [],
+      "zombies": 0,
+      "if_stopped": [
+        "no supervisor will restart it and no parent is waiting on its exit status; anything connected to its ports would lose the connection"
+      ],
+      "agent_link": null
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+name: CI
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  rust:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Rust stable
+        run: |
+          rustup toolchain install stable --profile minimal --component rustfmt --component clippy
+          rustup default stable
+      - name: Formatting
+        run: cargo fmt --all --check
+      - name: Clippy
+        if: ${{ !cancelled() }}
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: Tests
+        if: ${{ !cancelled() }}
+        run: cargo test --workspace
+
+  msrv:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Rust 1.88 minimum
+        run: rustup toolchain install 1.88.0 --profile minimal
+      - name: Build locked workspace on minimum Rust
+        run: cargo +1.88.0 build --workspace --all-targets --locked
+
+  swift:
+    strategy:
+      matrix:
+        include:
+          # Oldest available GitHub macOS image; 16.4 carries Swift 6.1.2 / SDK 15.5.
+          - runner: macos-15
+            developer_dir: /Applications/Xcode_16.4.app/Contents/Developer
+          - runner: macos-latest
+            developer_dir: /Applications/Xcode.app/Contents/Developer
+    runs-on: ${{ matrix.runner }}
+    env:
+      DEVELOPER_DIR: ${{ matrix.developer_dir }}
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      # Follow the image's default Xcode; log it because macos-latest moves.
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - run: swift build -c release
+      - run: swift test
+
+  secrets:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
+          GITLEAKS_VERSION: 8.30.1
+          GITLEAKS_ENABLE_COMMENTS: "false"
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: "false"
