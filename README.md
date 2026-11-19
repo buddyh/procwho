@@ -22,6 +22,8 @@ brew install buddyh/tap/procwho            # CLI
 brew install --cask buddyh/tap/procwho     # menu bar app (Procwho.app)
 ```
 
+To get updates from a plain `brew upgrade`, trust the tap once with `brew trust buddyh/tap`.
+
 To uninstall, run `brew uninstall procwho` or `brew uninstall --cask procwho`.
 
 <details>
