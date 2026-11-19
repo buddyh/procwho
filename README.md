@@ -19,6 +19,16 @@ macOS only: the CLI requires macOS 13+, and the menu bar app requires macOS 14+.
 Apple silicon is tested. Intel is built but untested.
 Release archives contain universal Apple silicon and Intel executables.
 
+```sh
+brew install buddyh/tap/procwho            # CLI
+brew install --cask buddyh/tap/procwho     # menu bar app (Procwho.app)
+```
+
+To uninstall, run `brew uninstall procwho` or `brew uninstall --cask procwho`.
+
+<details>
+<summary>Manual download</summary>
+
 Download the app zip or CLI archive from
 [Releases](https://github.com/buddyh/procwho/releases). Check `SHA256SUMS` before use.
 Unzip the app and drag `Procwho.app` to Applications. For the CLI, download the
@@ -35,6 +45,11 @@ procwho --version
 ```
 
 For future zsh sessions, add `export PATH="$HOME/.local/bin:$PATH"` to `~/.zshrc`.
+
+</details>
+
+<details>
+<summary>Build from source</summary>
 
 To build from source, use Rust 1.88 or later and Xcode 16.4 or later (Swift 6.1.2+, Swift 6 language mode).
 Matching Command Line Tools alone can build the macOS app with SwiftPM and `bundle.sh`;
@@ -53,6 +68,8 @@ make install-app # optional app copy to /Applications; no sudo
 
 `make uninstall` removes the installed CLI. Remove the app manually. Local history
 and configuration are retained. No installer creates a launch agent.
+
+</details>
 
 ## A 60-second CLI tour
 
