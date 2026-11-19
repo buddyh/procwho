@@ -110,7 +110,13 @@ else
     }
     submit "$APP_SUBMISSION" "$WORK/app-notary.json"
     submit "$CLI_SUBMISSION" "$WORK/cli-notary.json"
-    xcrun stapler staple "$APP"
+    # An Accepted ticket can take minutes to reach the staple service. Retry for ~10 minutes.
+    for attempt in $(seq 1 20); do
+        xcrun stapler staple "$APP" && break
+        (( attempt < 20 )) || fail 'stapler could not fetch the notarization ticket; retry stapling the staged app later'
+        echo "Waiting for the notarization ticket (attempt $attempt of 20)"
+        sleep 30
+    done
 fi
 
 # A bare CLI cannot be stapled. Its signed hash is registered by the zip submission;
