@@ -23,7 +23,9 @@
    See Apple's [notarytool workflow](https://developer.apple.com/documentation/security/customizing-the-notarization-workflow).
 
 3. Update the workspace version in `Cargo.toml`, `Cargo.lock`, `app/VERSION`, and
-   `CHANGELOG.md`. Check package metadata and the README install commands. Confirm
+   `CHANGELOG.md`. Check package metadata and the README install commands, including
+   the archive file name in the Manual download block (the `shasum` and `tar` lines)
+   and that the brew commands still match the tap. Confirm
    the supported-agent table against the detection rules. Commit all release work.
    The release script refuses tracked or untracked changes, including other agents'
    pending work. Do not stash or discard someone else's changes to pass this check.
@@ -87,3 +89,18 @@
    three assets; replace `RELEASE-NOTES.md` with that notes file. Review the command
    before running it. The script never creates a tag or GitHub release itself.
    Confirm published asset checksums and download links after publication.
+
+9. After publication, update `buddyh/homebrew-tap`. In `procwho.rb`, update `url`
+   and `sha256` for the CLI tarball. In `Casks/procwho.rb`, update `version` and
+   `sha256` for the app zip. Take both hashes from `dist/SHA256SUMS`. Then check and
+   test both:
+
+   ```sh
+   brew audit --strict --online --formula buddyh/tap/procwho
+   brew audit --strict --online --cask buddyh/tap/procwho
+   brew style buddyh/tap
+   brew install --formula buddyh/tap/procwho && procwho --version
+   brew install --cask buddyh/tap/procwho
+   brew uninstall --formula procwho
+   brew uninstall --cask procwho
+   ```
