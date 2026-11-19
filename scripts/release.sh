@@ -121,6 +121,8 @@ else
     done
 fi
 
+# Gatekeeper rejects bare executables under --type execute ("not an app"), so the
+# CLI is assessed by its primary signature instead.
 # A bare CLI cannot be stapled. Its signed hash is registered by the zip submission;
 # Gatekeeper needs network access to retrieve its notarization ticket.
 codesign --verify --strict "$WORK/procwho"
@@ -129,11 +131,11 @@ codesign --verify --strict --deep "$APP"
 if $DRY_RUN; then
     # Assessments are still attempted, but missing tickets are expected in a dry run.
     spctl -a --type execute "$APP" >/dev/null 2>&1 || echo 'DRY RUN: app Gatekeeper assessment failed (no new notarization).'
-    spctl -a --type execute "$WORK/procwho" >/dev/null 2>&1 || echo 'DRY RUN: CLI Gatekeeper assessment failed (no new notarization).'
+    spctl -a --type open --context context:primary-signature "$WORK/procwho" >/dev/null 2>&1 || echo 'DRY RUN: CLI Gatekeeper assessment failed (no new notarization).'
     xcrun stapler validate "$APP" || echo 'DRY RUN: no valid stapled ticket was found.'
 else
     spctl -a --type execute "$APP" >/dev/null 2>&1
-    spctl -a --type execute "$WORK/procwho" >/dev/null 2>&1
+    spctl -a --type open --context context:primary-signature "$WORK/procwho" >/dev/null 2>&1
     xcrun stapler validate "$APP"
 fi
 check_source
