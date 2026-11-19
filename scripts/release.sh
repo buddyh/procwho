@@ -93,8 +93,10 @@ codesign --verify --strict "$WORK/procwho"
 codesign --verify --strict "$APP/Contents/Resources/procwho"
 codesign --verify --strict --deep "$APP"
 
-APP_SUBMISSION="$WORK/Procwho-$VERSION-notary.zip"
-CLI_SUBMISSION="$WORK/procwho-$VERSION-notary.zip"
+# Names must differ beyond case: APFS is usually case-insensitive, so
+# Procwho-X-notary.zip and procwho-X-notary.zip would be the same file.
+APP_SUBMISSION="$WORK/app-$VERSION-notary.zip"
+CLI_SUBMISSION="$WORK/cli-$VERSION-notary.zip"
 ditto -c -k --keepParent "$APP" "$APP_SUBMISSION"
 ditto -c -k --keepParent "$WORK/procwho" "$CLI_SUBMISSION"
 check_source
