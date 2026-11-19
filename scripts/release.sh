@@ -65,7 +65,7 @@ for target in aarch64-apple-darwin x86_64-apple-darwin; do
     fi
     # Keep the builder's home and checkout paths out of the shipped binary.
     RUSTFLAGS="${RUSTFLAGS:-} --remap-path-prefix=${CARGO_HOME:-$HOME/.cargo}=/cargo --remap-path-prefix=${RUSTUP_HOME:-$HOME/.rustup}=/rustup --remap-path-prefix=$PWD=." \
-        cargo build --locked --release -p procwho-cli --target "$target"
+        cargo build --locked --release -p procwho --target "$target"
 done
 lipo -create "$CARGO_TARGET_DIR/aarch64-apple-darwin/release/procwho" \
     "$CARGO_TARGET_DIR/x86_64-apple-darwin/release/procwho" -output "$WORK/procwho"

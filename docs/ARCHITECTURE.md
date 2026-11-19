@@ -2,7 +2,7 @@
 
 procwho attributes visible macOS processes to named workloads. The Rust workspace separates
 kernel reads, attribution, history and rendering (`procwho-proc`), git inventory (`procwho-wt`),
-and CLI dispatch (`procwho-cli`). The app and MCP server consume those read-only interfaces.
+and CLI dispatch (the `procwho` package in `crates/procwho-cli`). The app and MCP server consume those read-only interfaces.
 No daemon or background sampling is required.
 
 ## Label rules

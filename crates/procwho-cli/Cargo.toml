@@ -1,5 +1,5 @@
 [package]
-name = "procwho-cli"
+name = "procwho"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

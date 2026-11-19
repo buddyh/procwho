@@ -173,7 +173,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "procwho-cli"
+name = "procwho"
 version = "0.1.0"
 dependencies = [
  "procwho-mcp",
