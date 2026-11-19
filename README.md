@@ -113,29 +113,41 @@ for a complete example.
 ## Menu bar app
 
 The Swift app shows workloads, findings, and worktrees. Open a workload for its
-processes, ownership evidence, and findings. Settings control refresh, presentation,
-worktree scan roots, and optional local alerts. The bundled CLI supplies the data.
-The app does not require a background daemon. Alerts and launch at login default to off.
-Overview ranks all visible families together; optional family grouping ranks groups
-by the same metric. System workloads are hidden by default with a Show footer.
-The Overview headline defaults to **Agents + associated**: agents, known host
-apps and workloads linked by launching evidence, each process counted once. Click
-the number or its chevrons to cycle through **Agents**, **Memory used**, and back.
-Memory used comes from macOS VM counters, with available RAM and kernel pressure;
-the default uses this view when no agents are detected. Medium-confidence linked
-bytes have a separate ~ caption. The composition strip highlights the selected
-view while keeping its attributed-memory denominator. Menu bar settings can follow
-the panel or select any of these views. Agent sessions, helper groups and host
-apps have separate counts. Unknown owner is distinct
-from detached Leftovers. The "~mostly not in RAM" badge is an estimate.
-Composition strips state their measured totals. Swap shows used bytes with a RAM-relative
-meter; detail CPU shows sample age or Not sampled. Worktrees supports
-search, sorting, visible filters and size measurement ages. Notification permission
-is separate from the app's Alerts switch.
+processes, ownership evidence, and findings. The bundled CLI supplies the data, and
+the app does not require a background daemon.
 
-Swap shows bytes in use. macOS creates more swap files on demand, so allocated swap
-is labelled **allocated so far**, never as a capacity limit. The meter compares use
-with installed RAM; pressure, high swap relative to RAM, and low disk space set its colour.
+**Overview**
+
+- The headline defaults to **Agents + associated**: agents, known host apps and
+  workloads linked by launching evidence, each process counted once. Click the number
+  or its chevrons to cycle through **Agents**, **Memory used**, and back.
+- Memory used comes from macOS VM counters, with available RAM and kernel pressure.
+  The default uses this view when no agents are detected.
+- Medium-confidence linked bytes have a separate ~ caption. The composition strip
+  highlights the selected view while keeping its attributed-memory denominator, and
+  composition strips state their measured totals.
+- All visible families are ranked together; optional family grouping ranks groups by
+  the same metric. System workloads are hidden by default with a Show footer.
+- Agent sessions, helper groups and host apps have separate counts. Unknown owner is
+  distinct from detached Leftovers. The "~mostly not in RAM" badge is an estimate.
+
+**Detail and worktrees**
+
+- Detail CPU shows sample age or Not sampled.
+- Worktrees supports search, sorting, visible filters and size measurement ages.
+
+**Settings and alerts**
+
+- Settings control refresh, presentation, worktree scan roots, and optional local
+  alerts. Menu bar settings can follow the panel or select any of the Overview views.
+- Alerts and launch at login default to off. Notification permission is separate
+  from the app's Alerts switch.
+
+**Swap**
+
+Swap shows bytes in use with a RAM-relative meter. macOS creates more swap files on
+demand, so allocated swap is labelled **allocated so far**, never as a capacity limit.
+Pressure, high swap relative to RAM, and low disk space set the meter's colour.
 The optional **Swap above N GB** alert starts at Automatic (25% of RAM, at least 2 GB),
 with a separate critical-memory-pressure condition. Alerts remain off until enabled.
 
