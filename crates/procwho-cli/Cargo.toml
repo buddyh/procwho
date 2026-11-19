@@ -20,3 +20,15 @@ procwho-mcp.workspace = true
 procwho-proc.workspace = true
 procwho-wt.workspace = true
 serde_json.workspace = true
+
+# cargo binstall downloads the notarized universal release tarball on macOS.
+# Other targets have no override and fall back to a source build.
+[package.metadata.binstall.overrides.aarch64-apple-darwin]
+pkg-url = "{ repo }/releases/download/v{ version }/procwho-{ version }-macos-universal.tar.gz"
+pkg-fmt = "tgz"
+bin-dir = "{ bin }{ binary-ext }"
+
+[package.metadata.binstall.overrides.x86_64-apple-darwin]
+pkg-url = "{ repo }/releases/download/v{ version }/procwho-{ version }-macos-universal.tar.gz"
+pkg-fmt = "tgz"
+bin-dir = "{ bin }{ binary-ext }"
