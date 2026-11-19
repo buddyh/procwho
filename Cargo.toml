@@ -10,6 +10,9 @@ repository = "https://github.com/buddyh/procwho"
 rust-version = "1.88"
 
 [workspace.dependencies]
+procwho-proc = { path = "crates/procwho-proc", version = "0.1.0" }
+procwho-wt = { path = "crates/procwho-wt", version = "0.1.0" }
+procwho-mcp = { path = "crates/procwho-mcp", version = "0.1.0" }
 libc = "0.2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"

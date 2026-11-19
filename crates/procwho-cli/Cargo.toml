@@ -5,7 +5,8 @@ edition.workspace = true
 license.workspace = true
 repository.workspace = true
 rust-version.workspace = true
-publish = false
+readme = "../../README.md"
+homepage = "https://github.com/buddyh/procwho"
 description = "Read-only macOS workload and git worktree CLI"
 keywords = ["macos", "process", "workload", "git", "worktree"]
 categories = ["command-line-utilities", "development-tools"]
@@ -15,7 +16,7 @@ name = "procwho"
 path = "src/main.rs"
 
 [dependencies]
-procwho-mcp = { path = "../procwho-mcp" }
-procwho-proc = { path = "../procwho-proc" }
-procwho-wt = { path = "../procwho-wt" }
+procwho-mcp.workspace = true
+procwho-proc.workspace = true
+procwho-wt.workspace = true
 serde_json.workspace = true

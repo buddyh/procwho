@@ -5,7 +5,6 @@ edition.workspace = true
 license.workspace = true
 repository.workspace = true
 rust-version.workspace = true
-publish = false
 description = "Read-only process to workload attribution for macOS"
 keywords = ["macos", "process", "workload", "git", "worktree"]
 categories = ["command-line-utilities", "development-tools"]
