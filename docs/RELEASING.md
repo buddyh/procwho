@@ -5,12 +5,19 @@
    `aarch64-apple-darwin` and `x86_64-apple-darwin` Rust targets with `rustup target add`.
    It builds the CLI and Swift executable for both chips. No installation uses sudo.
 
-2. Set up a notarytool profile once. Run the interactive command below and enter
-   your Apple account, team, and app-specific password when prompted. Keep those
-   values out of shell history, repository files, and CI logs.
+2. Choose a notarytool keychain profile for `NOTARY_PROFILE`. Any existing profile
+   for the Developer ID team can be reused. Check that a profile works with:
 
    ```sh
-   xcrun notarytool store-credentials procwho-notary
+   xcrun notarytool history --keychain-profile <name>
+   ```
+
+   Only if none exists, run the interactive command below and enter your Apple
+   account, team, and app-specific password when prompted. Keep those values out
+   of shell history, repository files, and CI logs.
+
+   ```sh
+   xcrun notarytool store-credentials <name>
    ```
 
    See Apple's [notarytool workflow](https://developer.apple.com/documentation/security/customizing-the-notarization-workflow).
@@ -41,7 +48,7 @@
 
    ```sh
    export SIGN_IDENTITY='Developer ID Application: YOUR CERTIFICATE NAME (TEAMID)'
-   export NOTARY_PROFILE=procwho-notary
+   export NOTARY_PROFILE='<name>'
    scripts/release.sh 0.1.0 --dry-run
    ```
 
