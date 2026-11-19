@@ -3,7 +3,7 @@
 ## Commands
 
 The following is command syntax; angle brackets and square brackets mark arguments,
-not shell text to paste. Install the CLI first and add its folder to PATH, as in the
+not shell text to paste. Install the CLI first, as in the
 [README](../README.md#install). Use `procwho --help`, `procwho top --help`, or
 `procwho --version` for executable help/version commands.
 
