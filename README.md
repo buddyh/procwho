@@ -49,7 +49,7 @@ For future zsh sessions, add `export PATH="$HOME/.local/bin:$PATH"` to `~/.zshrc
 <details>
 <summary>Build from source</summary>
 
-To build from source, use Rust 1.88 or later and Xcode 16.4 or later (Swift 6.1.2+, Swift 6 language mode).
+Use Rust 1.88 or later and Xcode 16.4 or later (Swift 6.1.2+, Swift 6 language mode).
 Matching Command Line Tools alone can build the macOS app with SwiftPM and `bundle.sh`;
 full Xcode is required for the universal release packaging command. No simulator is needed. Install Rust first using [rustup](https://rustup.rs/).
 
