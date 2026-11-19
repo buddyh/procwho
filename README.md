@@ -22,8 +22,8 @@ brew install buddyh/tap/procwho            # CLI
 brew install --cask buddyh/tap/procwho     # menu bar app (Procwho.app)
 ```
 
-With Rust installed, `cargo binstall procwho` downloads the same signed release binary, and
-`cargo install procwho` builds it from source.
+Rust users can run `cargo binstall procwho` (needs [cargo-binstall](https://github.com/cargo-bins/cargo-binstall);
+downloads the same signed release binary) or `cargo install procwho` (builds from source).
 
 To get updates from a plain `brew upgrade`, trust the tap once with `brew trust buddyh/tap`.
 
