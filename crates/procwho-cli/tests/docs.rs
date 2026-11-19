@@ -47,7 +47,11 @@ fn readme_install_works_with_stock_path_and_fresh_home() {
         .unwrap()
         .success());
     let readme = std::fs::read_to_string(root().join("README.md")).unwrap();
-    let block = shell_blocks(&readme)[0];
+    // The manual download block; the README leads with Homebrew, which this test cannot run.
+    let block = shell_blocks(&readme)
+        .into_iter()
+        .find(|b| b.contains("tar -xzf"))
+        .expect("README has a manual download block");
     let out = Command::new("/bin/zsh")
         .env_clear()
         .env("HOME", dir.join("home"))
