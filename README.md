@@ -15,9 +15,7 @@ repositories.
 
 ## Install
 
-macOS only: the CLI requires macOS 13+, and the menu bar app requires macOS 14+.
-Apple silicon is tested. Intel is built but untested.
-Release archives contain universal Apple silicon and Intel executables.
+macOS 13+ (menu bar app 14+), Apple silicon and Intel.[^intel]
 
 ```sh
 brew install buddyh/tap/procwho            # CLI
@@ -247,3 +245,5 @@ data sources, precedence, confidence, redaction, and failure behavior.
 MIT. See [LICENSE](LICENSE).
 
 For plain explanations of workload labels, measurements, confidence and worktree verdicts, read [What the labels mean](docs/GLOSSARY.md).
+
+[^intel]: Release builds are universal, but Intel Macs are untested.
